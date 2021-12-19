@@ -23,6 +23,7 @@ getData(apiUrl, useData, null)
 async function getData(file, func, param){
     let x = await fetch(file)
     let y = await x.json()
+    console.log("database baglanildi")
     func(y, param)
 }
 
@@ -148,10 +149,5 @@ function toggleFunction() {
 function homeFunc(){
     history.pushState(null, null, '/')
     location = '#'
-<<<<<<< HEAD
     getData(apiUrl, useData)
 }
-=======
-    getData('apiUrl', useData)
-}
->>>>>>> f69b319781f47722e7f751fe4a9707b2b7467142
