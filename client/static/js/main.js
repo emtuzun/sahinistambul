@@ -6,6 +6,7 @@ navTitle2 = document.getElementById('navTitle2')
 contentTitle = document.getElementById('contentTitle')
 homePage = document.getElementById('homePage')
 contentPic = document.getElementById('contentPic')
+apiUrl = 'https://sahinistambul.herokuapp.com/api/articles'
 
 a = []
 b = []
@@ -16,7 +17,7 @@ homePage.addEventListener('click', homeFunc)
 
 
 // get all data
-getData('http://localhost:5000/api/articles/', useData, null)
+getData('apiUrl', useData, null)
 
 // fetch api
 async function getData(file, func, param){
@@ -81,7 +82,7 @@ function useData(data){
 // click crticles
 function onClick(element) {
     console.log(element.target.className)
-    getData('http://localhost:5000/api/articles/', clickData, element)
+    getData('apiUrl', clickData, element)
 }
 
 function clickData(data, element){
@@ -147,5 +148,5 @@ function toggleFunction() {
 function homeFunc(){
     history.pushState(null, null, '/')
     location = '#'
-    getData('http://localhost:5000/api/articles/', useData)
+    getData('apiUrl', useData)
 }
