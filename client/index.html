@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <title>Şahin İstambul</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="sahinistambul, Şahin İstambul, Sahin, İstambul, yazı, yazılar">
+        <meta name="description" content="Şahin İstambul Kişisel Web Sitesi">
+        <meta name="author" content="Şahin İstambul">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.jpg">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar" id="myNavbar">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+                </a>
+                <div class="w3-bar-item w3-button" id="homePage">Ana Sayfa</div>
+                <a class="w3-bar-item w3-button w3-hide-small" id="navTitle1"></a>
+                <a href="#yazilarim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Yazılarım</a>
+                <a href="#iletisim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> İletişim</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+                </a>
+            </div>
+
+            <!-- Navbar on small screens -->
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                <a class="w3-bar-item w3-button" id="navTitle2" onclick="toggleFunction()">Çiçekçi Çocuk</a>
+                <a href="#yazilarim" class="w3-bar-item w3-button" onclick="toggleFunction()">Yazılarım</a>
+                <a href="#iletisim" class="w3-bar-item w3-button" onclick="toggleFunction()">İletişim</a>
+                <a href="#" class="w3-bar-item w3-button">Ara</a>
+            </div>
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" id="sahinistambul">Şahin <span class="w3-hide-small"></span> İstambul</span>
+            </div>
+        </div>
+        
+        <!-- Container (Yazilarim Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="baslik">
+            <h3 class="w3-center" id="contentTitle">Çiçekçi Çocuk</h3>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large" style="margin-top:7rem">
+                <img id="contentPic" class="w3-round w3-image" alt="Content Picture" width="500" height="333">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+                <p id="yazi1"></p>
+            </div>
+        </div>
+        <div class="w3-row w3-container w3-padding-64">
+            <p id="yazi2"></p>
+        </div>
+    </div>
+        <!-- Second Parallax Image with Portfolio Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min"></div>
+
+        <!-- Container (Portfolio Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="yazilarim">
+            <h3 class="w3-center">Yazılarım</h3>
+            <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+            <div id="articles"></div>
+        </div>
+
+
+        <!-- Third Parallax Image with Portfolio Text -->
+        <div class="bgimg-3 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">İletişim</span>
+            </div>
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="iletisim">
+            <p class="w3-center"><em>Yazılarımla ilgili düşüncelerinizi paylaşabilirsiniz.</em></p>
+
+            <div class="w3-row w3-padding-32 w3-section">
+                <div class="w3-col m4 w3-container">
+                    <img src="/img/contact.svg" class="w3-image w3-round" style="width:100%">
+                </div>
+                <div class="w3-col m8 w3-panel">
+                    <div class="w3-large w3-margin-bottom">
+                        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Eposta: sahin.istambul35@hotmail.com<br>
+                    </div>
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="İsim" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Eposta" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Mesaj" required name="Message">
+                        <button class="w3-button w3-black w3-right w3-section" type="submit">
+                            <i class="fa fa-paper-plane"></i> Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>En Başa Git</a>
+            <div class="w3-xlarge w3-section">
+                <a href="https://www.facebook.com/sahin.istambul"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+                <a href="https://www.instagram.com/sahinistambul/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+                <a href="https://twitter.com/sahin_194"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+        </footer>
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>
