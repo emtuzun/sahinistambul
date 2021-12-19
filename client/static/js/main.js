@@ -148,5 +148,10 @@ function toggleFunction() {
 function homeFunc(){
     history.pushState(null, null, '/')
     location = '#'
+<<<<<<< HEAD
     getData(apiUrl, useData)
 }
+=======
+    getData('apiUrl', useData)
+}
+>>>>>>> f69b319781f47722e7f751fe4a9707b2b7467142
