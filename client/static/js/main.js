@@ -17,7 +17,7 @@ homePage.addEventListener('click', homeFunc)
 
 
 // get all data
-getData('apiUrl', useData, null)
+getData(apiUrl, useData, null)
 
 // fetch api
 async function getData(file, func, param){
@@ -82,7 +82,7 @@ function useData(data){
 // click crticles
 function onClick(element) {
     console.log(element.target.className)
-    getData('apiUrl', clickData, element)
+    getData(apiUrl, clickData, element)
 }
 
 function clickData(data, element){
@@ -148,5 +148,5 @@ function toggleFunction() {
 function homeFunc(){
     history.pushState(null, null, '/')
     location = '#'
-    getData('apiUrl', useData)
+    getData(apiUrl, useData)
 }
