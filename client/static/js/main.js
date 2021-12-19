@@ -23,6 +23,7 @@ getData('apiUrl', useData, null)
 async function getData(file, func, param){
     let x = await fetch(file)
     let y = await x.json()
+    console.log("database baglanildi")
     func(y, param)
 }
 
